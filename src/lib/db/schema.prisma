@@ -7,12 +7,19 @@ provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+enum Role {
+  USER
+  ADMIN
+  MODERATOR
+}
+
 model User {
   id            String          @id @default(cuid())
   name          String?
   email         String?         @unique
   password      String?
   emailVerified DateTime?
+  role          Role           @default(USER)
   image         String?
   accounts      Account[]
   sessions      Session[]

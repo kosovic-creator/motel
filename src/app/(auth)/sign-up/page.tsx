@@ -10,6 +10,7 @@ const Page = async () => {
   const session = await auth();
   if (session) redirect("/");
 
+
   return (
     <div className="w-full max-w-sm mx-auto space-y-6">
       <h1 className="text-2xl font-bold text-center mb-6">Create Account</h1>
@@ -56,7 +57,7 @@ const Page = async () => {
           Sign Up
         </Button>
       </form>
-
+    
       <div className="text-center">
         <Button asChild variant="link">
           <Link href="/sign-in">Already have an account? Sign in</Link>

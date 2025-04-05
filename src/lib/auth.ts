@@ -53,6 +53,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!params.token.sub) {
           throw new Error("No user ID found in token");
         }
+        
 
         const createdSession = await adapter?.createSession?.({
           sessionToken: sessionToken,
