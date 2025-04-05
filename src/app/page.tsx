@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { SignOut } from "@/components/sign-out";
 import { auth } from "@/lib/auth";
-import { Home } from "lucide-react";
+// import { Home } from "lucide-react";
 import { redirect } from "next/navigation";
+import Home from "@/app/(root)/home/page";
 
 const Page = async () => {
   const session = await auth();

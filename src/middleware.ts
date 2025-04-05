@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/rezervacije/:path*"], // Rute koje treba zaštititi
+  matcher: ["/admin/:path*", "/test/:path*"], // Rute koje treba zaštititi
 };
 
 
