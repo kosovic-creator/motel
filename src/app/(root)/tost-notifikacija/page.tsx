@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
+import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 const ToastDemo = () => {
@@ -8,18 +10,49 @@ const ToastDemo = () => {
         toast({
             title: "Uspešno!",
             description: "Vaša akcija je uspešno završena.",
-           // Opcije: 'success', 'error', 'info', 'destructive'
+
+            // Opcije: 'success', 'error', 'info', 'destructive'
+            duration: 5000, // Trajanje u milisekundama (opciono)
+        });
+    };
+    const showAlertToast = () => {
+        toast({
+            title: "Neuspešno!",
+            description: "Vaša akcija je nije uspešno završena.",
+            variant:"destructive",
+            // Opcije: 'success', 'error', 'info', 'destructive'
             duration: 5000, // Trajanje u milisekundama (opciono)
         });
     };
 
+
+
     return (
-        <button
-            onClick={showSuccessToast}
-            className="px-4 py-2 bg-green-500 text-white rounded"
-        >
-            Prikaži Toast
-        </button>
+        <>
+
+            <Button
+                onClick={showSuccessToast}
+
+            >
+                Prikaži Toast
+            </Button>
+
+            <Button
+                onClick={showAlertToast}
+
+            >
+                Prikaži Alert Toast
+            </Button>
+
+
+
+
+
+
+
+        </>
+
+
     );
 };
 
