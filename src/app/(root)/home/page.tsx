@@ -9,7 +9,7 @@ export default async function page() {
      const session = await auth();
   return (
      <>
-     <h2>Home</h2>
+     <h3>Home</h3>
      {/* {!session ? redirect("/rezervacija") : null} */}
      </>
   );
