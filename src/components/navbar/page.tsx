@@ -7,6 +7,8 @@ import Home from '@/app/(root)/home/page'
 import { SignOut } from '@/components/sign-out'
 import { SignIn } from '@/components/sign-in'
 import { auth } from '@/lib/auth'
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink } from '@radix-ui/react-navigation-menu'
+
 
 export default async function NavBar() {
   const session = await auth();
@@ -19,6 +21,7 @@ export default async function NavBar() {
         <p className="text-gray-600">Signed in as:</p>
         {session && <p className="font-medium">{session.user?.email}</p>}
       </div>
+    
     </header>
 
   )
