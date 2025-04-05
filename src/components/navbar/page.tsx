@@ -12,7 +12,7 @@ import { auth } from '@/lib/auth'
 export default async function NavBar() {
   const session = await auth();
   return (
-    <header className='flex justify-between items-center bg-gray-800 p-4 size-full'>
+    <nav className='flex justify-between items-center bg-gray-800 p-4 size-full'>
       <div >
         {!session ? <SignIn /> : <SignOut />}
       </div>
@@ -21,7 +21,11 @@ export default async function NavBar() {
         {session && <p className="font-medium">{session.user?.email}</p>}
       </div>
 
-    </header>
+    </nav>
+
+
+
+    
 
   )
 }
