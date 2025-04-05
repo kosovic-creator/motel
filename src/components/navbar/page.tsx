@@ -13,15 +13,15 @@ import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuT
 export default async function NavBar() {
   const session = await auth();
   return (
-    <header className='flex justify-between items-center bg-gray-100 p-4'>
+    <header className='flex justify-between items-center bg-gray-800 p-4 size-full'>
       <div >
         {!session ? <SignIn /> : <SignOut />}
       </div>
-      <div className="bg-gray-100 rounded-lg p-4 text-center mb-6 md:ml-6">
-        <p className="text-gray-600">Signed in as:</p>
+      <div className="bg-gray-800 rounded-lg p-4 text-center mb-6 md:ml-6 text-white">
+        <p className="text-gray-50">Signed in as:</p>
         {session && <p className="font-medium">{session.user?.email}</p>}
       </div>
-    
+
     </header>
 
   )

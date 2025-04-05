@@ -12,7 +12,7 @@ const SignIn = () => {
 
   return (
     <div >
-      <Button variant="link" onClick={async () => {
+      <Button className="text-white" variant="link" onClick={async () => {
        redirect("/sign-in");;
 
         alert("You are signed in!");
