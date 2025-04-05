@@ -1,5 +1,5 @@
 'use client'
-import { useToast } from "@/components/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const ToastDemo = () => {
     const { toast } = useToast();
@@ -8,7 +8,7 @@ const ToastDemo = () => {
         toast({
             title: "Uspešno!",
             description: "Vaša akcija je uspešno završena.",
-            status: "success", // Opcije: 'success', 'error', 'info', 'destructive'
+           // Opcije: 'success', 'error', 'info', 'destructive'
             duration: 5000, // Trajanje u milisekundama (opciono)
         });
     };
