@@ -3,7 +3,7 @@
 import { schema } from "@/lib/schema";
 import db from "@/lib/db/db";
 import { executeAction } from "@/lib/executeAction";
-import { useToast } from "@/components/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const signUp = async (formData: FormData) => {
   const { toast } = useToast();
@@ -12,7 +12,7 @@ const signUp = async (formData: FormData) => {
         toast({
             title: "Uspešno!",
             description: "Vaša akcija je uspešno završena.",
-            status: "success", // Opcije: 'success', 'error', 'info', 'destructive'
+           
             duration: 5000, // Trajanje u milisekundama (opciono)
         });
     };
